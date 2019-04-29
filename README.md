@@ -30,10 +30,10 @@ My requirements would be:
 - A tight PCB for industry finish
 
 # Changes
-1) Moved code from PlatformIO back to Arduino
+1) Refarctored code from PlatformIO back to Arduino
 2) Created some state calls and a statefull setup
 3) Seperated some stuff for robustness
-4) Made readeliy compatible with HA via MQTT
+4) Made compatible with HA via MQTT
 5) Matching PCB
 
 # Requirements:
