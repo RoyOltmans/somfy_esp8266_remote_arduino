@@ -34,6 +34,7 @@ My requirements would be:
 2) Created some state calls and a statefull setup
 3) Seperated some stuff for robustness
 4) Made readeliy compatible with HA via MQTT
+5) Matching PCB
 
 # Requirements:
 - MQTT bus
