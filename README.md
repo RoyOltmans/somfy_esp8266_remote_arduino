@@ -66,6 +66,12 @@ Firstly use the standard libraries and at least version 1.8.9 of Arduino
 
 Edit the config.h to match your environment (read previous forkes for some extra info)
 
+Change:
+- [SSID] (remove brackets)
+- [SSID Password] (remove brackets)
+- IMPORTANT Change any accurance of [DEVICE ID YOU USE] 4 times int he file (remove brackets), use a string without special characters eg "abcd" not "a,b;c:/d"
+- [MQTT HOST Server] (remove brackets)
+
 See for example this site (have not tested this one):
 http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/arduino-esp8266-lolin-nodemcu-getting-started/
 
@@ -106,7 +112,7 @@ mosquitto_pub -h server-01 -t 'home/nodemcu/somfy/attic_blinds' -m 'p'
 If all goes well you have an working Somfy set
 
 # Home Assistant
-Under covers, use this confi
+Under covers, use this config
 ```
   - platform: mqtt
     name: "Somfy Shutter"
