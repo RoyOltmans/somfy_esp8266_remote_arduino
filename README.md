@@ -107,16 +107,18 @@ If all goes well you have an working Somfy set
 
 # Home Assistant
 Under covers, use this confi
+```
   - platform: mqtt
     name: "Somfy Shutter"
-    availability_topic: "home/nodemcu/somfy/[DEVICE ID YOU USED MAC OR ANY]/status"
-    state_topic: "home/nodemcu/somfy/[DEVICE ID YOU USED MAC OR ANY]/state"
-    command_topic: "home/nodemcu/somfy/[DEVICE ID YOU USED MAC OR ANY]"
+    availability_topic: "home/nodemcu/somfy/[DEVICE ID YOU USE]/status"
+    state_topic: "home/nodemcu/somfy/[DEVICE ID YOU USE]/state"
+    command_topic: "home/nodemcu/somfy/[DEVICE ID YOU USE]"
     qos: 1
     payload_open: "u"
     payload_stop: "s"
     payload_close: "d"
     retain: true
+```
 
 ## The hardware list is as followed (made by Marmotton):
 The [doc](https://github.com/marmotton/Somfy_Remote/blob/master/doc) folder contains some photos.
