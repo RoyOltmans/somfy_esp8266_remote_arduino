@@ -1,4 +1,4 @@
-# somfy_esp8266_remote_arduino rev 0.1
+# Somfy ESP8266 Remote Arduino rev 0.1
 Somfy ESP8266 Remote 433.24 RTS
 
 Description: Lightweight arduino code for an esp8266 NodeMCU (lolin)
@@ -47,6 +47,7 @@ My requirements would be:
 - resistor of 330ohm
 - 2x 15 pin headers
 - Short 433 antenna
+- Somfy RT
 
 # Desolder 433.92Mhz and solder 433.42Mhz crystal on transmitter
 So firstly remove the original crystal with the new 433.42Mhz (see list below).
@@ -110,10 +111,12 @@ Somfy PROGRAMING
 mosquitto_pub -h server-01 -t 'home/nodemcu/somfy/attic_blinds' -m 'p'
 ```
 
+The rolling code value is stored in the EEPROM, so that you don't loose count of your rolling code after a reset. In case you'd like to replace the ESP, write down the current rolling codes which can be read using the serial terminal (and use them as default rolling codes in config.h).
+
 If all goes well you have an working Somfy set
 
 # Home Assistant
-Under covers, use this config
+Under covers in HA, use this config
 ```
   - platform: mqtt
     name: "Somfy Shutter"
